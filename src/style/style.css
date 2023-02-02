@@ -1,0 +1,714 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+header h1 {
+    font-family: 'Sofia', cursive;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header img {
+    width: 120px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+
+.head_bar {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo {
+    max-width: 60%;
+}
+
+.photo>img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.input_section {
+    min-width: 38%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 35px 10px 35px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #f1f3fb;
+}
+
+.input_section>.image>img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    object-position: center;
+    display: none;
+}
+
+.input_section>h2 {
+    text-align: center;
+    color: #000000;
+}
+
+.input_section>form>button {
+    background-color: #5DADE2;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section>form>button>span {
+    font-weight: bold;
+}
+
+.input_section>form>.input>input {
+    width: 100%;
+    font-size: 14px;
+    padding: 5px;
+    font-family: 'Poppins';
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    outline: none;
+}
+
+::placeholder {
+    padding-left: 3px;
+    font-size: 12px;
+}
+
+.actionButton {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+#delete,
+#checklist {
+    margin: 5px;
+    font-size: 17px;
+    border-radius: 50%;
+    padding: 7px;
+    background: #f1f3fb;
+    border-color: transparent;
+}
+
+#checklist:hover {
+    background: #F4D03F;
+    color: white;
+}
+
+.search #checklist:hover {
+    background: #5DADE2;
+    color: white;
+}
+
+.completeBookshelfList #checklist:hover {
+    background: rgb(66, 163, 66);
+    color: white;
+}
+
+#delete:hover {
+    background: #E74C3C;
+    color: white;
+}
+
+.input_section>form>.input>select {
+    width: 100%;
+    padding: 5px;
+    font-size: 13px;
+    font-family: 'Poppins';
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    outline: none;
+}
+
+button {
+    font-family: 'Poppins';
+}
+
+.input_section>form>.input>label {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input_section>form>.input>input:focus,
+.input_section>form>.input>input:valid {
+    border-color: #5DADE2;
+    padding-left: 10px;
+}
+
+.input_section>form>.input>select:focus,
+.input_section>form>.input>select:valid {
+    border-color: #5DADE2;
+}
+
+.input_section>form>.input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section>form>.input_inline>label {
+    color: #000000;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.status {
+    white-space: nowrap;
+    width: 100%;
+    font-size: 12px;
+    padding: 3px 5px 3px 5px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.Complete {
+    background-color: rgb(66, 163, 66);
+}
+
+.Incomplete {
+    background-color: #F4D03F;
+}
+
+.BookshelfCard {
+    float: left;
+    padding-left: 20px;
+    border-radius: 10px;
+    background-color: #f1f3fb;
+    width: 50%;
+}
+
+.BookshelfCard h2 {
+    font-size: 22px;
+}
+
+.BookCard {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+}
+
+.incompleteBookshelfList {
+    width: 48.5%;
+    margin-right: 5px;
+}
+
+.completeBookshelfList {
+    width: 48.5%;
+    margin-left: 5px;
+}
+
+.Book {
+    display: flex;
+    width: 100%;
+    background-color: #FFF;
+    margin-bottom: 15px;
+    margin-right: 8px;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.BookDetail {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    margin-top: -12px;
+}
+
+.BookGenre,
+.BookAuthor,
+.BookTitle,
+.year {
+    max-width: 110px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.BookTitle {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.BookAuthor {
+    color: #3b3b3b;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.BookGenre {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.year {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.BookshelfCard .BookCard img {
+    width: 60px;
+    height: 90px;
+    border-radius: 7px;
+    align-items: center;
+}
+
+.search .BookCard img {
+    width: 60px;
+    height: 90px;
+    border-radius: 7px;
+    align-items: center;
+}
+
+.search .BookCard {
+    width: 100%;
+    padding: 5px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.search .BookCard .Book {
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 13px;
+    padding-left: 7px;
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+.searchCard {
+    width: 30%;
+}
+
+.bookShelf {
+    width: 70%;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #f1f3fb;
+    margin-right: 10px;
+    padding: 15px 7px 15px 7px;
+}
+
+.bookStatus {
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+.search-box {
+    width: 100%;
+    display: flex;
+    background: #ffffff;
+    height: 40px;
+    border-radius: 40px;
+    padding: 7px;
+    align-items: center;
+}
+
+#bookSubmit {
+    background-color: #423f3f;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#bookSubmit:hover {
+    background-color: #000;
+}
+
+
+#searchSubmit {
+    float: right;
+    border: 1px solid;
+    border-color: #f1f3fb;
+    background: #f1f3fb;
+    border-radius: 50%;
+    padding: 7px;
+    cursor: pointer;
+}
+
+#searchSubmit i {
+    font-size: 17px;
+    color: #2f3640;
+}
+
+.search-txt {
+    width: 100%;
+    padding-left: 8px;
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    color: #2f3640;
+    font-size: 14px;
+    transition: 0.4s;
+    font-family: 'Poppins';
+}
+
+.popup_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+}
+
+.background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+button {
+    border: 0;
+}
+
+.popup_box {
+    width: 450px;
+    background: #f2f2f2;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+    border: 1px solid #b3b3b3;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .2);
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.97);
+    transition: all 0.3s ease;
+}
+
+#check:checked~.popup_box {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#check:checked~.background {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#check {
+    display: none;
+}
+
+.popup_box i {
+    font-size: 60px;
+    color: #f23b26;
+    border: 5px solid #f23b26;
+    padding: 20px 40px;
+    border-radius: 50%;
+    margin: -10px 0 20px 0;
+}
+
+.popup_box h1 {
+    font-size: 20px;
+    color: #1b2631;
+    margin-bottom: 5px;
+}
+
+.popup_box label {
+    font-size: 15px;
+    color: #404040;
+}
+
+.popup_box .btns {
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.btns .btn1,
+.btns .btn2 {
+    background: #999999;
+    border-color: #999999;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.btns .btn2 {
+    border-color: #ff3333;
+    background: #ff3333;
+}
+
+.btns .btn1 {
+    margin-left: 20px;
+}
+
+.btns .btn1:hover {
+    transition: .5s;
+    background: #696969;
+    border-color: #696969;
+}
+
+.btns .btn2:hover {
+    transition: .5s;
+    background: #ca0101;
+    border-color: #ca0101;
+}
+
+.toast {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    padding: 5px;
+    padding-left: 10px;
+    text-align: center;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.9s ease-in-out;
+}
+
+@media screen and (max-width: 1200px) {
+    .card {
+        width: 100%;
+        padding: 0px 20px 5px 30px;
+        align-items: center;
+    }
+
+    .second {
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .photo>img {
+        max-height: 500px;
+    }
+
+    .search .actionButton {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .bookStatus {
+        display: flex;
+        width: 100%;
+    }
+
+    .second {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search .actionButton {
+        flex-direction: row;
+    }
+
+    .searchCard {
+        width: 60%;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .bookShelf {
+        width: 100%;
+    }
+
+    .incompleteBookshelfList {
+        width: 50%;
+    }
+
+    .completeBookshelfList {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .card {
+        margin-top: 0px;
+    }
+
+    .searchCard {
+        margin-top: 20px;
+    }
+
+    .actionButton {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .popup_box {
+        max-width: 430px;
+    }
+
+    .input_section {
+        margin-left: 0;
+    }
+
+    .card {
+        margin-top: -30px;
+    }
+
+    .second {
+        margin-top: -80px;
+    }
+
+    .searchCard {
+        width: 100%;
+    }
+
+    .search {
+        margin-right: 0px;
+    }
+
+    .actionButton {
+        flex-direction: row;
+    }
+
+    .bookStatus {
+        flex-direction: column;
+    }
+
+    .incompleteBookshelfList {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .completeBookshelfList {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .photo>img {
+        display: none;
+    }
+
+    .input_section>.image>img {
+        display: block;
+    }
+
+    .card {
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .card {
+        padding: 20px;
+    }
+
+    .searchCard {
+        margin-top: 60px;
+    }
+
+    .popup_box {
+        max-width: 400px;
+        padding: 30px;
+    }
+
+    .popup_box i {
+        margin-top: -10px;
+        margin-bottom: 0px;
+    }
+
+    .popup_box h1 {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .btns .btn1,
+    .btns .btn2 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .popup_box {
+        max-width: 370px;
+    }
+}
+
+
+@media screen and (max-width: 410px) {
+    .popup_box {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .popup_box {
+        max-width: 330px;
+    }
+
+    .actionButton {
+        flex-direction: column;
+    }
+
+    .search .actionButton {
+        flex-direction: column;
+    }
+
+    .bookStatus h2 {
+        font-size: 20px;
+    }
+}

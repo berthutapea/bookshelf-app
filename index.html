@@ -1,0 +1,109 @@
+.
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bookshelf App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="head_bar">
+        <img src="assets/img/book.png" alt="book">
+        <h1 class="head_bar__title">Bookshelf App</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="card">
+                <div class="photo">
+                    <img src="assets/img/buku.png" alt="">
+                </div>
+                <div class="input_section">
+                    <div class="image">
+                        <img src="assets/img/buku.png" alt="">
+                    </div>
+                    <h2>Masukkan Buku Baru</h2>
+                    <form id="inputBook">
+                        <div class="input">
+                            <label for="inputBookTitle">Judul</label>
+                            <input id="inputBookTitle" type="text" placeholder="ex : Belajar Pemograman Dasar" required>
+                        </div>
+                        <div class="input">
+                            <label for="inputBookAuthor">Penulis</label>
+                            <input id="inputBookAuthor" type="text" required placeholder="ex : Gilbert Hutapea">
+                        </div>
+                        <div class="input">
+                            <label for="inputBookYear">Tahun</label>
+                            <input id="inputBookYear" type="number" required placeholder="ex : 2023">
+                        </div>
+                        <div class="input">
+                            <label for="inputBookCategory">Kategori</label>
+                            <select name="bookCategory" id="inputBookCategory" class="bookCategory" required>
+                                <option value="" selected>Pilih kategori buku...</option>
+                                <option value="Pendidikan">Pendidikan</option>
+                                <option value="Politik">Politik</option>
+                                <option value="Petualangan">Petualangan</option>
+                                <option value="Komedia">Komedi</option>
+                                <option value="Anak-anak">Anak-anak</option>
+                                <option value="Dewasa">Dewasa</option>
+                                <option value="Horor">Horor</option>
+                                <option value="Misteri">Misteri</option>
+                                <option value="Romantis">Romantis</option>
+                                <option value="Thriller">Thriller</option>
+                                <option value="Sejarah">Sejarah</option>
+                            </select>
+                        </div>
+                        <div class="input">
+                            <label for="inputBookImage">Link Cover Buku</label>
+                            <input id="inputBookImage" type="text" required
+                                placeholder="ex : https://edit.org/images/cat/book-covers-big-2019101610.jpg">
+                        </div>
+                        <div class="input_inline">
+                            <label for="inputBookIsComplete">Selesai dibaca</label>
+                            <input id="inputBookIsComplete" type="checkbox">
+                        </div>
+                        <button id="bookSubmit" type="submit">Masukkan buku ke dalam rak <span>Belum selesai
+                                dibaca</span></button>
+                    </form>
+                </div>
+            </div>
+            <div class="card second">
+                <div class="searchCard">
+                    <div class="search" id="search">
+                        <div class="search-box shadow">
+                            <input id="search-txt" class="search-txt" type="text" name=""
+                                placeholder="Cari judul buku disini..">
+                            <button id="searchSubmit" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="BookCard">
+                        </div>
+                    </div>
+                </div>
+                <div class="bookShelf">
+                    <div class="bookStatus">
+                        <div class="BookshelfCard incompleteBookshelfList">
+                            <h2>Belum Selesai Dibaca</h2>
+                            <div class="BookCard" id="uncompleteBook">
+                            </div>
+                        </div>
+                        <div class="BookshelfCard completeBookshelfList">
+                            <h2>Selesai Dibaca</h2>
+                            <div class="BookCard" id="completeBook">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="src/script/index.js"></script>
+</body>
+
+</html>
