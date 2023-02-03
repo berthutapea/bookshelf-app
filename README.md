@@ -2,7 +2,7 @@
 
 Submission Aplikasi Pengelolaan Data Menggunakan DOM dan Web Storage - Kelas Belajar Membuat Front-End Web untuk Pemula Oleh Dicoding
 
-🗒️ [Sertifikat Kompetensi Kelas Belajar Membuat Front-End Web untuk Pemula](https://www.dicoding.com/certificates/72ZD9J65JPYW) [^1]
+🗒️ [Sertifikat Kompetensi Kelas Belajar Membuat Front-End Web untuk Pemula](https://www.dicoding.com/certificates/72ZD9J65JPYW)
 
 ## 🚀 Deskripsi Kelas
 
