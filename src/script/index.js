@@ -3,14 +3,7 @@ const RENDER_EVENT = 'render-book';
 const SAVED_EVENT = 'saved-book';
 const STORAGE_KEY = 'BOOKSHELF';
 
-inputBookIsComplete.addEventListener('change', function () {
-    const bookSubmit = document.querySelector('#bookSubmit>span')
-    if (inputBookIsComplete.checked) {
-        bookSubmit.innerText = 'Selesai Dibaca'
-    } else {
-        bookSubmit.innerText = 'Belum Selesai Dibaca'
-    }
-})
+
 
 function generateBookObject(id, title, author, year, category, image, isCompleted) {
     return {
