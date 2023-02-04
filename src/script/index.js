@@ -24,7 +24,14 @@ function generateBookObject(id, title, author, year, category, image, isComplete
     }
 }
 
-
+function findBook(bookId) {
+    for (const bookItem of books) {
+        if (bookItem.id === bookId) {
+            return bookItem;
+        }
+    }
+    return null;
+}
 
 function findBookIndex(bookId) {
     for (const index in books) {
