@@ -12,17 +12,7 @@ inputBookIsComplete.addEventListener('change', function () {
     }
 })
 
-function generateBookObject(id, title, author, year, category, image, isCompleted) {
-    return {
-        id,
-        title,
-        author,
-        year,
-        category,
-        image,
-        isCompleted
-    }
-}
+
 
 function findBook(bookId) {
     for (const bookItem of books) {
