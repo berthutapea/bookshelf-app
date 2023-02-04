@@ -42,6 +42,14 @@ function findBookIndex(bookId) {
     return -1;
 }
 
+function findBookTitle(bookTitle) {
+    for (const Booktitle in books) {
+        if (Booktitle.title === bookTitle) {
+            return Booktitle;
+        }
+    }
+    return 1;
+}
 
 
 /**
