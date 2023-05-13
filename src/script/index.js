@@ -491,7 +491,7 @@ function undoBookFromCompleted(bookId) {
     bookTarget.isCompleted = false;
     document.dispatchEvent(new Event(RENDER_EVENT));
     saveData();
-};
+}
 
 document.addEventListener(RENDER_EVENT, function () {
     const uncompletedBookList = document.getElementById('uncompleteBook');
